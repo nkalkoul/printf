@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nas91 <kalkoul.nassim@gmail.com>           #+#  +:+       +#+        */
+/*   By: nkalkoul <nkalkoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-06-15 19:24:53 by nas91             #+#    #+#             */
-/*   Updated: 2024-06-15 19:24:53 by nas91            ###   ########.fr       */
+/*   Created: 2024/06/15 19:24:53 by nas91             #+#    #+#             */
+/*   Updated: 2024/06/17 14:12:05 by nkalkoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
+
 ft_printf(const char *, ...)
 {
+	va_list carg;
 	
 }
