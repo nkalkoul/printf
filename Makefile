@@ -1,17 +1,16 @@
-SRCS =	ft_printf.c
+SRCS =	ft_printf.c ft_put.c
 CC =	cc -Wall -Werror -Wextra
 DIRLIB = ./libft
+INCLUDE = ./include
 NAME =	libftprintf.a
 OBJS =	$(SRCS:.c=.o)
 
-makelib : 
-	make -C $(DIRLIB)
-	mv libft.a $(NAME)
-
 all : $(NAME) #EXEC
 
-$(NAME): makelib $(OBJS)
-	ar -rsc $(NAME) $(OBJS)
+$(NAME): $(OBJS)
+	make -C $(DIRLIB)
+	cp $(DIRLIB)/libft.a $(NAME)
+	ar -rc $(NAME) $(OBJS)
 
 #EXEC : main.c
 #	$(CC) main.c $(NAME)
@@ -22,10 +21,11 @@ $(NAME): makelib $(OBJS)
 
 
 clean :
+	make clean -C $(DIRLIB)
 	rm -f $(OBJS)
 
 
 fclean : clean
-	rm -f $(NAME)
+	rm -f $(NAME) a.out
 
 re : fclean all
