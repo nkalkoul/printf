@@ -22,6 +22,12 @@ int	ft_convert(va_list carg, char form)
 		return (ft_puts(va_arg(carg, char *)));
 	if (form == 'u')
 		return (ft_putu(va_arg(carg, unsigned int)));
+	if (form == )
+	if (form == '%')
+	{
+		ft_putchar_fd('%', 1);
+		return (1);
+	}
 	return (0);
 }
 

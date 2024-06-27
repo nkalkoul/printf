@@ -36,10 +36,8 @@ int	ft_puts(char *str)
 	int		count;
 
 	if (!str)
-	{
-		write(1, "(null)", 6);
-		return (6);
-	}
+		return (write(1, "(null)", 6));
+		
 	count = ft_strlen(str);
 
 	ft_putstr_fd(str, 1);
@@ -52,10 +50,8 @@ int	ft_putu(unsigned int n)
 
 	count = 0;
 	if (n > 9)
-		{
-			ft_putu(n / 10);
-			count++;
-		}
+		count += ft_putu(n / 10);
+	count++;
 	ft_putchar_fd((n % 10) + '0', 1);
 	return(count);
 }

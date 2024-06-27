@@ -28,7 +28,7 @@ int	main(void)
 	q = 'm';
 	d = ft_printf("je suis nassim et j ai %d ans. Je fais %d %c, %s %ufois\n", o, v, q, str, po);
 	p = printf("je suis nassim et j ai %d ans. Je fais %d %c, %s %ufois\n", o, v, q, str, po);
-	printf("\n%d", p);
 	printf("\n%d", d);
+	printf("\n%d", p);
 	return (0);
 }
