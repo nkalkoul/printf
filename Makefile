@@ -1,4 +1,4 @@
-SRCS =	ft_printf.c ft_put.c
+SRCS =	ft_printf.c ft_put.c ft_puthexa.c
 CC =	cc -Wall -Werror -Wextra
 DIRLIB = ./libft
 INCLUDE = ./include
