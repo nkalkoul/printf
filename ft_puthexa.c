@@ -6,7 +6,7 @@
 /*   By: nkalkoul <nkalkoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 20:39:57 by nas91             #+#    #+#             */
-/*   Updated: 2024/06/29 01:16:36 by nkalkoul         ###   ########.fr       */
+/*   Updated: 2024/06/29 03:05:45 by nkalkoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,16 @@ int	ft_putnbrbase(unsigned long nb, char *base)
 
 	count = 0;
 	lenb = ft_strlen(base);
-	if (nb >= (unsigned long) lenb)
+	if (nb >= (unsigned long)lenb)
 	{
-		count += ft_putnbrbase(nb / (unsigned long)lenb, base);
-		count += ft_putnbrbase(nb % (unsigned long)lenb, base);
+		count += ft_putnbrbase(nb / lenb, base);
+		count += ft_putnbrbase(nb % lenb, base);
 	}
-	ft_putchar_fd(base[nb], 1);
-	count++;
+	else
+	{
+		ft_putchar_fd(base[nb], 1);
+		count++;
+	}
 	return (count);
 }
 
@@ -40,5 +43,17 @@ int	ft_putptr(void *ptr)
 	vaddr = (unsigned long long)ptr;
 	count += write(1, "0x", 2);
 	count += ft_putnbrbase(vaddr, "0123456789abcdef");
+	return (count);
+}
+
+int	ft_puthex(unsigned int nb, char format)
+{
+	int	count;
+
+	count = 0;
+	if (format == 'x')
+		count += ft_putnbrbase(nb, "0123456789abcdef");
+	if (format == 'X')
+		count += ft_putnbrbase(nb, "0123456789ABCDEF");
 	return (count);
 }

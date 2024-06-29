@@ -6,7 +6,7 @@
 /*   By: nkalkoul <nkalkoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:23:48 by nkalkoul          #+#    #+#             */
-/*   Updated: 2024/06/25 20:37:26 by nkalkoul         ###   ########.fr       */
+/*   Updated: 2024/06/29 03:05:37 by nkalkoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,7 @@ int	ft_puts(char *str)
 
 	if (!str)
 		return (write(1, "(null)", 6));
-		
 	count = ft_strlen(str);
-
 	ft_putstr_fd(str, 1);
 	return (count);
 }
@@ -53,5 +51,5 @@ int	ft_putu(unsigned int n)
 		count += ft_putu(n / 10);
 	count++;
 	ft_putchar_fd((n % 10) + '0', 1);
-	return(count);
+	return (count);
 }

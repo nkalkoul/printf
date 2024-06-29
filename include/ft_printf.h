@@ -6,7 +6,7 @@
 /*   By: nkalkoul <nkalkoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 19:32:32 by nkalkoul          #+#    #+#             */
-/*   Updated: 2024/06/29 01:17:22 by nkalkoul         ###   ########.fr       */
+/*   Updated: 2024/06/29 03:03:28 by nkalkoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int	ft_putptr(void *ptr);
 int	ft_putnbrbase(unsigned long nb, char *base);
 int	ft_putptr(void *ptr);
 int	ft_putnbrbase(unsigned long nb, char *base);
+int	ft_puthex(unsigned int nb, char format);
 
 #endif

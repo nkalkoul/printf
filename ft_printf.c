@@ -6,7 +6,7 @@
 /*   By: nkalkoul <nkalkoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 19:24:53 by nas91             #+#    #+#             */
-/*   Updated: 2024/06/27 22:15:16 by nkalkoul         ###   ########.fr       */
+/*   Updated: 2024/06/29 03:03:15 by nkalkoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ int	ft_convert(va_list carg, char form)
 		return (ft_puts(va_arg(carg, char *)));
 	if (form == 'u')
 		return (ft_putu(va_arg(carg, unsigned int)));
+	if (form == 'p')
+		return (ft_putptr(va_arg(carg, void *)));
+	if (form == 'x' || form == 'X')
+		return (ft_puthex(va_arg(carg, unsigned int), form));
 	if (form == '%')
 	{
 		ft_putchar_fd('%', 1);
